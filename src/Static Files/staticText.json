@@ -1,0 +1,19 @@
+{
+  "IntroText": "Hello Everyone, I Awanish Mishra have done this SDE Assignment of Manufac Analytics.",
+  "Table1":"Class Table",
+  "buttonText":"Click Here",
+  "Table2":"Gamma Table",
+  "tableText": {
+    "class": "Class",
+    "mean": "Mean",
+    "median": "Median",
+    "mode": "Mode",
+    "flavanoids": "Flavanoids",
+    "gama": "Gama"
+  },
+  "routes":{
+      "home":"/",
+      "class":"/class",
+      "gamma":"/gamma"
+  }
+}
