@@ -1,9 +1,13 @@
 import React from "react";
+import { findMode } from "./findMode";
 
 //Importing Static Files
 import winesData from "../Static Files/Wine-Data.json";
 import textData from "../Static Files/staticText.json";
 import "../Styles/tableStyle.css";
+
+
+
 
 const AlchoholTable = () => {
   //Grouping Data of every Wine together
@@ -89,74 +93,78 @@ const AlchoholTable = () => {
         name: alchoholClass,
         mean: meanValues[alchoholClass],
         median: medianValues[alchoholClass],
-        mode: modeValues[alchoholClass],
+        mode: findMode( modeValues[alchoholClass] ),
       };
     }
   }
 
-  console.log("Grouped Result is", Object.values(groupedResults));
-
   return (
     <React.Fragment>
       <table class="table">
-        <thead>
+
+      <table class="table">
+        <tr>
           <th> {textData.tableText.meausre} </th>
+
+          {Object.values(groupedResults).map((i, key) => {
+            return (
+              <td data-label={`${textData.tableText.meausre}`}>
+                {" "}
+                Class {++key}{" "}
+              </td>
+            );
+          })}
+        </tr>
+
+        <tr>
           <th>
-            {" "}
             {textData.tableText.flavanoids} {textData.tableText.mean}{" "}
           </th>
+
+          {Object.values(groupedResults).map((i, key) => {
+            return (
+              <td
+                data-label={`${textData.tableText.flavanoids} ${textData.tableText.mean}`}
+              >
+                {i.mean}
+              </td>
+            );
+          })}
+        </tr>
+
+        <tr>
           <th>
-            {" "}
             {textData.tableText.flavanoids} {textData.tableText.median}{" "}
           </th>
+
+          {Object.values(groupedResults).map((i, key) => {
+            return (
+              <td
+                data-label={`${textData.tableText.flavanoids} ${textData.tableText.median}`}
+              >
+                {i.median}
+              </td>
+            );
+          })}
+        </tr>
+
+        <tr>
           <th>
-            {" "}
             {textData.tableText.flavanoids} {textData.tableText.mode}{" "}
           </th>
-        </thead>
-        <tbody>
-            {
-                Object.values(groupedResults).map(i=>{
-                    return <tr>
-                        <td data-label={`${textData.tableText.meausre}`}> Class {i.name}</td>
-            <td
-              data-label={`${textData.tableText.flavanoids} ${textData.tableText.mean}`}
-            >
-             {i.mean}
-            </td>
-            <td
-              data-label={`${textData.tableText.flavanoids} ${textData.tableText.median}`}
-            >
-             {i.median}
-            </td>
-            <td
-              data-label={`${textData.tableText.flavanoids} ${textData.tableText.mode}`}
-            >
-                {i.mode.map(j=>{
-                    return <span> {j} ,  </span>
-                })}
-            </td>
-                        </tr>
-                })
-            }
-          {/* <tr>
-            <td data-label={`${textData.tableText.meausre}`}>hi</td>
-            <td
-              data-label={`${textData.tableText.flavanoids} ${textData.tableText.mean}`}
-            >
-              2.83
-            </td>
-            <td
-              data-label={`${textData.tableText.flavanoids} ${textData.tableText.median}`}
-            >
-              {" "}
-              2.8
-            </td>
-            <td
-              data-label={`${textData.tableText.flavanoids} ${textData.tableText.mode}`}
-            ></td>
-          </tr> */}
-        </tbody>
+
+          {Object.values(groupedResults).map((i, key) => {
+            return (
+              <td
+                data-label={`${textData.tableText.flavanoids} ${textData.tableText.mode}`}
+              >
+                {i.mode}
+              </td>
+            );
+          })}
+        </tr>
+      </table>
+
       </table>
     </React.Fragment>
   );
