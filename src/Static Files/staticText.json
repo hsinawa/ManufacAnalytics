@@ -9,7 +9,8 @@
     "median": "Median",
     "mode": "Mode",
     "flavanoids": "Flavanoids",
-    "gama": "Gama"
+    "gama": "Gama",
+    "meausre":"Measure"
   },
   "routes":{
       "home":"/",

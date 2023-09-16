@@ -1,7 +1,11 @@
 body {
   margin: 0;
-  padding: 20px;
+  padding: 0px;
   font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .table {
@@ -18,13 +22,11 @@ body {
 }
 
 .table th {
-  background-color: #92c9e6;
+  background-color: #8c8d8d;
   color: #ffffff;
 }
 
-.table tbody tr:nth-child(even) {
-  background-color: #d1e8f5;
-}
+
 
 /*responsive*/
 
