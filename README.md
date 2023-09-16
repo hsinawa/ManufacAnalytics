@@ -10,10 +10,10 @@ To build the application use: yarn build
 **Screenshots
 
 Welcome Page
-![GitHub Logo](./Images/Homepage.png)
+![GitHub Logo](https://github.com/hsinawa/ManufacAnalytics/blob/main/src/Images/Homepage.png?raw=true)
 
 Class Table
-![GitHub Logo](./Images/class.png)
+![GitHub Logo](https://github.com/hsinawa/ManufacAnalytics/blob/main/src/Images/class.png?raw=true)
 
 Gamma Table
-![GitHub Logo](./Images/gamma.png)
+![GitHub Logo](https://github.com/hsinawa/ManufacAnalytics/blob/main/src/Images/gamma.png?raw=true)
